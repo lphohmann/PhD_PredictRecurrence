@@ -27,7 +27,7 @@ infile.1 <- "./data/SCANB/1_clinical/raw/Summarized_SCAN_B_rel4_NPJbreastCancer_
 #######################################################################
 
 # function: loads RData data file and allows to assign it directly to variable
-loadRData <- function(file.path){
+loadRData <- function(file.path) {
   load(file.path)
   get(ls()[ls() != "file.path"])
 } 
@@ -36,7 +36,7 @@ loadRData <- function(file.path){
 # clinical data
 #######################################################################
 
-# annotation 
+# annotation
 anno <- loadRData(infile.1)
 anno <- anno[anno$Follow.up.cohort == TRUE,]
 
